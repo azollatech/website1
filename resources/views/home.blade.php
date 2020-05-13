@@ -60,7 +60,7 @@
         <div class="left-bg"></div>
         <div class="container">
             <div class="row">
-                <div class="left-bg-ref col-4" style="
+                <div class="left-bg-ref col-12 col-sm-4" style="
                     height: 100%;
                     padding-top: 180px;
                     padding-left: 20px;
@@ -92,7 +92,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="tagline col-8" style="
+                <div class="tagline col-12 col-sm-8" style="
                     color: white;
 				    z-index: 2000;
                     text-align: left;
@@ -187,6 +187,7 @@
 }
         #banner {
             height: 100vh;
+		    max-height: 1080px;
             -moz-background-size:cover;
             -webkit-background-size:cover;
             -o-background-size:cover;
