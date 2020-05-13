@@ -1,0 +1,992 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+body {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    font-family: 'Noto Sans TC', sans-serif;
+    color: #71748d;
+    background-color: #efeff6;
+    -webkit-font-smoothing: antialiased;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Temporary code to workaround a regression in Bootstap 4.0alpha6,
+    remove this code when Bootstrap is updated with a new release. */
+.form-control::-webkit-input-placeholder {
+  color: #ccc;
+}
+
+.form-control::-moz-placeholder {
+  color: #ccc;
+}
+
+.form-control:-ms-input-placeholder {
+  color: #ccc;
+}
+
+.form-control::placeholder {
+  color: #ccc;
+}
+
+.wrapper-without-footer {
+    min-height: 100%;
+
+    /* Equal to height of footer */
+    /* But also accounting for potential margin-bottom of last child */
+    margin-bottom: -284px;
+}
+
+.footer,
+.push {
+    height: 284px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #3d405c;
+}
+
+a {
+    color: #007bff;
+}
+
+a:hover {
+    color: #0069d9;
+    text-decoration: none;
+}
+
+a:active,
+a:hover {
+    outline: 0;
+    text-decoration: none;
+}
+
+.table td, .table th {
+    padding: .4rem .75rem;
+}
+
+.btn-link.disabled, .btn-link:disabled {
+    color: #98A5B0;
+    pointer-events: none;
+}
+.navbar-brand h1 {
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    /* text-transform: uppercase; */
+    letter-spacing: 0;
+    color: #444444;
+    word-wrap: break-word;
+    white-space: normal;
+}
+.navbar-light .navbar-nav .nav-link {
+    text-transform: uppercase;
+    font-size: 14px;
+    color: rgba(255,255,255,0.7);
+}
+.navbar-light .navbar-nav .nav-link:hover {
+    color: rgba(255,255,255,1);
+}
+#sidenav .nav-link {
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+}
+#hidden-navbar {
+    transition: top 0.3s;
+}
+#hidden-navbar .navbar-brand h1 {
+    margin-bottom: 4px;
+}
+
+.bg-dark-gray {
+    background-color: #333;
+}
+
+/* Race cells */
+
+.race-thumb-wrapper {
+    width: 120px;
+    position: relative;
+    z-index: 100;
+}
+.race-thumb {
+    border: 1px solid #eee;
+    border-radius: 4px;
+    object-fit: cover;
+    cursor: pointer;
+}
+.hide-races .race-thumb {
+    height: 72px;
+}
+.race-summary {
+    min-height: 120px;
+    padding-left: 130px;
+}
+.race-summary .race-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+.race-summary h3.race-title {
+    letter-spacing: 0;
+    margin-bottom: 0.3rem;
+}
+.race-summary h4.race-title {
+    letter-spacing: 0;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: .2rem;
+}
+.race-summary h4.race-title span.distance-info {
+    font-size: 14px;
+}
+.race-summary .race-info-block {
+    display: inline-block;
+    font-size: 14px;
+}
+.hide-races .race-summary {
+    min-height: unset;
+}
+.cut-text {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+/* .race-links a {
+    font-weight: bold;
+    letter-spacing: 0.4px;
+    color: #3d405c;
+}
+.race-links a:hover {
+    color: #0069d9;
+} */
+
+.btn-outline-custom {
+    color: #3d405c;
+    border-color: #add8e6;
+    padding: 0.275rem 0.65rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+.btn-outline-custom:hover {
+    color: #fff;
+    background-color: #3d405c;
+    border-color: #3d405c;
+}
+
+/* ajax loading */
+.ajax-loading{
+    height: 64px;
+    line-height: 64px;
+    text-align: center;
+}
+
+/* hamburger button */
+.hamburger {
+    height: 48px;
+    width: 48px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #333;
+    margin: 0;
+    padding: 8px;
+    border: 0;
+    background-color: transparent;
+}
+.hamburger i {
+    height: 32px;
+    width: 32px;
+}
+.material-icons.md-32 {
+    font-size: 32px;
+}
+
+/* sidenav */
+#sidenav {
+    height: 100%;
+    width: 0;
+    max-width: 100%;
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    right: 0;
+    background-color: #FFF;
+    overflow-x: hidden;
+    padding-top: 48px;
+    transition: width 0.5s;
+}
+#sidenav.active {
+    width: 300px;
+}
+#sidenav a {
+    padding: 12px 20px 12px 28px;
+    text-decoration: none;
+    color: #333333;
+    display: block;
+    font: normal normal normal 16px/1.4em raleway,sans-serif;
+    color: #397AB8 !important;
+    transition: 0.2s;
+}
+#sidenav a:hover {
+    color: #0C3D6B !important;
+}
+#sidenav a:active {
+    color: #092F52 !important;
+}
+#sidenav .active a {
+    background: #fafafa;
+    /* color: #333 !important; */
+    color: #092F52 !important;
+}
+#sidenav-overlay {
+    background: rgba(0,0,0,0.6);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1999;
+    /* transition: opacity 0.5s; */
+    pointer-events: none;
+}
+#sidenav-overlay.active {
+    opacity: 1 !important;
+    pointer-events: all;
+}
+#sidenav li.active a.sidenav-item {
+    color: #000;
+}
+#sidenav a.lang-btn {
+    margin: 0 12px;
+}
+
+.activated_filter {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    display: inline-block;
+    padding: 0px 28px 0px 10px;
+    line-height: 24px;
+    border-radius: 12px;
+    position: relative;
+    cursor: pointer;
+    font-size: 0.875rem;
+}
+.activated_filter i {
+    vertical-align: middle;
+    position: absolute;
+    right: 0;
+}
+
+/* -----------------------
+1.1  Cards
+-------------------------*/
+
+.card {
+    margin-bottom: 30px;
+    border: none;
+    -webkit-box-shadow: 0px 1px 2px 1px rgba(154, 154, 204, 0.22);
+    -moz-box-shadow: 0px 1px 2px 1px rgba(154, 154, 204, 0.22);
+    box-shadow: 0px 1px 2px 1px rgba(154, 154, 204, 0.22);
+}
+
+.card-header {
+    background-color: #fff;
+    border-bottom: 1px solid #e6e6f2;
+}
+
+.card-title {}
+
+.card-subtitle {
+    font-size: 14px;
+}
+
+.card-body {}
+
+.card-text {}
+
+.card-footer {
+    border-top: 1px solid #e6e6f2;
+    background: #f6f6ff;
+}
+
+.card-link {}
+
+.toolbar {
+    font-size: 18px;
+}
+
+.card-header-title {
+    margin: 0;
+    line-height: 2;
+}
+
+.card-toolbar-tabs {}
+
+.card-toolbar-tabs .nav.nav-pills {}
+
+.card-toolbar-tabs .nav.nav-pills .nav-item {}
+
+.card-toolbar-tabs .nav.nav-pills .nav-item .nav-link {
+    font-size: 14px;
+    padding: 6px 10px;
+}
+
+.card-toolbar-tabs .nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    color: #5969ff;
+    background-color: transparent;
+}
+
+
+/*------------------------- Card Varience --------------------------*/
+
+.card-figure {
+    position: relative;
+    padding: 10px;
+    border-radius: 2px;
+}
+
+.card-figure .figure {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-bottom: 0;
+}
+
+.card-figure .figure-caption {
+    display: block;
+    margin-top: 10px;
+    font-size: .875rem;
+    color: inherit;
+}
+
+.figure-title {
+    margin: 0 0 .125rem;
+    text-transform: capitalize;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.card-figure.has-hoverable {
+    -webkit-transition: -webkit-transform .2s, -webkit-box-shadow .2s;
+    transition: -webkit-transform .2s, -webkit-box-shadow .2s;
+    transition: transform .2s, box-shadow .2s;
+    transition: transform .2s, box-shadow .2s, -webkit-transform .2s, -webkit-box-shadow .2s;
+}
+
+.card-figure.has-hoverable:focus,
+.card-figure.has-hoverable:hover {
+    -webkit-transform: translate3d(0, -.25rem, 0);
+    transform: translate3d(0, -.25rem, 0);
+    -webkit-box-shadow: 0 5px 15px 0 rgba(61, 70, 79, .15);
+    box-shadow: 0 5px 15px 0 rgba(61, 70, 79, .15);
+}
+
+.figure-img {
+    position: relative;
+    margin-bottom: 0;
+    overflow: hidden;
+}
+
+.figure-img .img-link {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: hsla(0, 0%, 100%, .96);
+    opacity: 0;
+    z-index: 2;
+    -webkit-transition: opacity .2s ease;
+    transition: opacity .2s ease;
+}
+
+.card-figure:hover .img-link {
+    opacity: 1;
+}
+
+.figure-img .img-link .tile {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -1rem;
+    margin-left: -1rem;
+}
+
+.tile.bg-danger {
+    color: #fff;
+}
+
+.tile-circle {
+    border-radius: 4rem;
+}
+
+.figure-action {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+}
+
+.card-figure:hover .figure-action {
+    opacity: 1;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    z-index: 2;
+}
+
+.figure-tools {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    padding: .5rem;
+    opacity: 0;
+    z-index: 2;
+    -webkit-transition: opacity .3s ease;
+    transition: opacity .3s ease;
+}
+
+.card-figure:hover .figure-tools {
+    opacity: 1;
+}
+
+.figure-description {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 2.25rem .5rem;
+    background-color: hsla(0, 0%, 100%, .96);
+    opacity: 0;
+    -webkit-transition: all .3s ease;
+    transition: all .3s ease;
+    z-index: 1;
+}
+
+.card-figure:hover .figure-description {
+    opacity: 1;
+}
+
+.figure-attachment {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    min-height: 200px;
+    background-color: #f5f5f5;
+    overflow: hidden;
+}
+
+.btn-reset {
+    padding: 0 2px;
+    font-size: inherit;
+    line-height: inherit;
+    color: inherit;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+
+/*------------------------- Card Navigation --------------------------*/
+
+.card-header-tabs {}
+
+.card-header-pills {}
+
+.pills-regular .card-header-pills.nav.nav-pills .nav-item .nav-link.active {
+    background-color: #5969ff;
+    color: #fff;
+}
+
+
+/* -----------------------
+1.2  Banner
+-------------------------*/
+
+.banner {
+    background: #fff;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center -170px;
+    background-image: url("../img/Hike-Pat-Sin-Leng-39.jpg");
+    box-shadow: 0px 1px 2px 1px rgba(154, 154, 204, 0.22);
+    -webkit-filter: grayscale(10%);
+    filter: grayscale(10%);
+    height: 280px;
+}
+.runner-search .banner {
+    height: 430px;
+}
+.runner-search-results .banner {
+    height: 150px;
+}
+.runner .banner,
+.race-results .banner {
+    height: 80px;
+}
+.runner-search .btn-primary:disabled {
+    background-color: #ccc;
+    border-color: #bbb;
+}
+.runner-search-box .form-control::-webkit-input-placeholder {
+    color: #ddd;
+}
+.runner-search-box .form-control::-moz-placeholder {
+    color: #ddd;
+}
+.runner-search-box .form-control:-moz-placeholder {
+    color: #ddd;
+}
+.runner-search-box .form-control:-ms-input-placeholder {
+    color: #ddd;
+}
+.runner-search-box .form-control::placeholder {
+    color: #ddd;
+}
+.search-icon {
+    vertical-align: text-bottom;
+}
+
+.banner .banner-overlay {
+    /* background: rgb(255,255,255, 0.7); */
+    /* background: linear-gradient(0deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,.85) 100%); */
+    background: rgb(255,255,255, 0.2);
+    background: linear-gradient(0deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.1) 60%, rgba(255,255,255,.65) 100%);
+    width: 100%;
+    height: 100%;
+}
+
+
+/* -----------------------
+1.3  Pagination
+-------------------------*/
+
+.pagination {
+    -ms-flex-pack: end!important;
+    justify-content: flex-end!important;
+}
+
+
+/* -----------------------
+1.4  Filters
+-------------------------*/
+
+.irs--flat .irs-handle>i:first-child {
+    background-color: #4e73df!important;//Replace With Your color code
+}
+.irs--flat .irs-bar {
+    background-color: #4e73df!important;//Replace With Your color code
+}
+.irs--flat .irs-from, .irs--flat .irs-to, .irs--flat .irs-single {
+    background-color: #4e73df!important;//Replace With Your color code
+}
+.irs--flat .irs-from:before, .irs--flat .irs-to:before, .irs--flat .irs-single:before {
+    border-top-color: #4e73df!important;//Replace With Your color code
+}
+
+/* -----------------------
+1.5  Itra Points Badges
+-------------------------*/
+
+.itra-points-badge {
+    font-size: 12px;
+    vertical-align: bottom;
+    padding-right: .5em;
+    padding-left: .5em;
+}
+
+/* -----------------------
+1.6  Race Cell Actions on the left
+-------------------------*/
+
+.race-cell-actions-left {
+    z-index: 100;
+    top: 134px;
+}
+.race-cell-actions-left a.btn {
+    max-width: 120px !important;
+    width: 120px;
+}
+
+/* -----------------------
+1.7  Runners table
+-------------------------*/
+
+#runners-table.table td, #runners-table.table th {
+    border-top: none;
+}
+#runners-table {
+    margin: 0 !important;
+}
+#runners-table tr.view a:hover,
+#runners-table tr.fold a:hover {
+    text-decoration: underline;
+}
+.flag-icon- {
+    background: #f5f5f5;
+}
+
+/* -----------------------
+1.7  Results table
+-------------------------*/
+
+.max-two-lines {
+   overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-box-orient: vertical;
+   -webkit-line-clamp: 2; /* number of lines to show */
+}
+
+/* -----------------------
+2.1  Runner Profile Page
+-------------------------*/
+
+.profile .card-header-background {
+    position: absolute;
+    height: 170px;
+    width: 100%;
+}
+.profile .profile-pic-wrapper {
+    position: absolute;
+    left: 46px;
+    top: 40px;
+}
+
+.profile .p-image {
+    position: absolute;
+    left: 118px;
+    top: 118px;
+    z-index: 1000;
+}
+
+.profile .separator {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.profile .separator::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: cadetblue;
+    clip-path: polygon(500% 0, 0 0, 0 100%);
+}
+.profile .separator.reverse {
+  transform: rotateY(180deg);
+}
+
+.profile #uploading {
+    position: absolute;
+    left: 64px;
+    top: 64px;
+    display: none;
+}
+.profile #profile-pic {
+    object-fit: cover;
+    width: 160px;
+    height: 160px;
+}
+.profile .file-upload {
+    display: none;
+}
+
+.profile.public-profile .runner-name-div h2 {
+    font-size: 32px;
+}
+.profile.public-profile .runner-name-div {
+    padding-left: 220px;
+    padding-top: 20px;
+    padding-bottom: 60px;
+}
+.profile.private-profile .runner-name-div {
+    padding-top: 20px;
+    padding-bottom: 60px;
+}
+.profile.public-profile .no-profile-pic .profile-pic-wrapper {
+    display: none;
+}
+.profile.public-profile .no-profile-pic .runner-name-div {
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 0;
+}
+
+.profile .top-right-statistics {
+    width: 18rem;
+    position: absolute;
+    right: 48px;
+}
+.full-width-statistics ul {
+    font-size: 12px;
+}
+
+#runner-results-table tr:nth-child(4n+1), #runner-results-table tr:nth-child(4n+2) {
+    background-color: rgba(0,0,0,.05);
+}
+
+.passport-issuer-flag {
+    width: 162px;
+    height: 122px;
+}
+.datepicker {
+    cursor: pointer;
+}
+.datepicker:hover span {
+    background-color: #e4e8ec;
+}
+.datepicker:active span {
+    background-color: #dee3e7;
+}
+
+
+/* Extra large devices (large desktops, 1200px and up) */
+/* No media query since this is the default in Bootstrap */
+
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 1199px) {
+    .banner {
+        background-position: center;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 991px) {
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 767px) {
+    .pagination {
+        -ms-flex-pack: center!important;
+        justify-content: center!important;
+    }
+
+    /* profile */
+    .profile .profile-pic-wrapper {
+        position: absolute;
+        left: 24px;
+        top: 40px;
+    }
+    .profile .top-right-statistics {
+        width: 12rem;
+    }
+    .profile.public-profile #profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+    .profile.public-profile .card-header-background {
+        position: absolute;
+        height: 140px;
+        width: 100%;
+    }
+    .profile.public-profile .runner-name-div h2 {
+        font-size: 28px;
+    }
+    .profile.public-profile .runner-name-div {
+        padding-left: 160px;
+        padding-bottom: 20px;
+    }
+    .profile.public-profile .no-profile-pic .runner-name-div {
+        padding-left: 10px;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575px) {
+    html, body {
+        font-size: 12px;
+    }
+    .navbar-brand {
+        padding-right: 48px;
+    }
+    .race-thumb-wrapper,
+    .race-thumb {
+        width: 96px;
+    }
+    .race-thumb {
+        height: 96px;
+    }
+    /* .hide-races .race-thumb {
+        height: 48px;
+    } */
+    .race-summary {
+        min-height: 96px;
+        padding-left: 102px;
+    }
+    .race-summary .race-info-block {
+        /* display: block; */
+        font-size: 12px;
+    }
+    .search-title {
+        font-size: 1.5rem;
+        letter-spacing: 0;
+    }
+    .banner {
+        height: 220px;
+    }
+    .pagination {
+        -ms-flex-pack: center!important;
+        justify-content: center!important;
+    }
+    .itra-points-badge {
+        font-size: 10px;
+    }
+    .race-cell-actions-left {
+        top: 106px;
+    }
+    .race-cell-actions-left a.btn {
+        max-width: 96px !important;
+        width: 96px;
+    }
+    .race-summary h4.race-title span.distance-info {
+        font-size: inherit;
+    }
+    .fancybox-content {
+        padding: 16px;
+    }
+    .runner-search .banner {
+        height: 500px;
+    }
+    .runner .banner {
+        height: 60px;
+    }
+    .search-icon {
+        vertical-align: middle;
+    }
+
+    /* profile */
+    .profile.public-profile .card-header-background,
+    .profile.private-profile .card-header-background {
+        height: 100px;
+    }
+    .profile .profile-pic-wrapper {
+        position: absolute;
+        left: 16px;
+        top: 20px;
+    }
+    .profile #profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+    .profile #uploading {
+        position: absolute;
+        left: 44px;
+        top: 44px;
+        display: none;
+    }
+    .profile .p-image {
+        position: absolute;
+        left: 86px;
+        top: 86px;
+    }
+    .profile.public-profile .runner-name-div h2 {
+        font-size: 24px;
+    }
+    .profile.private-profile .runner-name-div {
+        padding-top: 20px;
+        padding-bottom: 8px;
+    }
+    .profile.public-profile .runner-name-div {
+        padding-left: 140px;
+        padding-top: 10px;
+        padding-bottom: 40px;
+    }
+    .passport-issuer-flag {
+        width: 122px;
+        height: 92px;
+    }
+}
+/* Ultra small */
+@media (max-width: 400px) {
+    .navbar-brand h1 {
+        font-size: 1.4rem;
+    }
+    .navbar-brand {
+        padding-right: 48px;
+    }
+    .powered-by {
+        font-size: 10.5px;
+    }
+    .btn-outline-custom {
+        max-width: 80px;
+    }
+    .race-cell-actions-left {
+        top: 106px;
+    }
+    .race-cell-actions-left a.btn {
+        max-width: 96px !important;
+        width: 96px;
+    }
+    /* .hide-races .race-thumb {
+        height: 48px;
+    } */
+    .race-summary h4.race-title span.distance-info {
+        font-size: inherit;
+    }
+    .fancybox-content {
+        padding: 16px;
+    }
+    #runners-table {
+        font-size: 12px;
+    }
+
+    /* profile */
+    .profile .profile-pic-wrapper {
+        left: 12px;
+    }
+    .profile.public-profile #profile-pic {
+        width: 72px;
+        height: 72px;
+    }
+    .profile.public-profile .runner-name-div {
+        padding-left: 84px;
+        padding-top: 4px;
+        padding-bottom: 0;
+    }
+    .profile.public-profile .runner-name-div h2 {
+        font-size: 18px;
+    }
+    .profile.public-profile .card-header-background {
+        height: 92px;
+    }
+}
+@media (max-width: 360px) {
+    #runners-table {
+        font-size: 10px;
+    }
+}
