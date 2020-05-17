@@ -55,10 +55,10 @@
 	<div id="mobile-banner" class="d-block d-md-none" style="overflow: auto;">
 		<ul class="cb-slideshow">
 			<li>
-				<span style="background-image: url({{url('img/bg-2.png')}})" data-string="香港最全面銀行理財網絡">Image 02</span>
+				<span style="background-image: url({{url('img/bg-2-min.png')}})" data-string="香港最全面銀行理財網絡">Image 02</span>
 			</li>
 			<li>
-				<span style="background-image: url({{url('/img/42521347552_07ffb97315_k.jpg')}})" data-string="遠離破產危機">Image 01</span>
+				<span style="background-image: url({{url('/img/42521347552_07ffb97315_k-min.jpg')}})" data-string="遠離破產危機">Image 01</span>
 			</li>
 		</ul>
 		<div class="position-absolute w-100">
@@ -109,10 +109,10 @@
     <div id="banner" class="desktop row position-relative d-none d-md-block">
 		<ul class="cb-slideshow">
 			<li>
-				<span style="background-image: url({{url('img/bg-2.png')}})" data-string="香港最全面銀行理財網絡">Image 02</span>
+				<span style="background-image: url({{url('img/bg-2-min.png')}})" data-string="香港最全面銀行理財網絡">Image 02</span>
 			</li>
 			<li>
-				<span style="background-image: url({{url('/img/42521347552_07ffb97315_k.jpg')}})" data-string="遠離破產危機">Image 01</span>
+				<span style="background-image: url({{url('/img/42521347552_07ffb97315_k-min.jpg')}})" data-string="遠離破產危機">Image 01</span>
 			</li>
 		</ul>
         <div class="left-bg"></div>
