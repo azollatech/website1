@@ -18,7 +18,11 @@
 				    letter-spacing: 1px;
 				    text-shadow: 0px 1px 4px rgba(0,0,0,0.3);">還原理財中心</h1>
 			</a>
-			<button class="hamburger d-block d-lg-none"><i class="material-icons md-32">menu</i></button>
+			<button class="hamburger d-block d-lg-none" style="
+			    top: 2px;
+			    padding: 0;
+			    height: 32px;
+			    width: 32px;"><i class="material-icons md-32">menu</i></button>
 			@include('partials.navbar')
 		</div>
 	</nav>
