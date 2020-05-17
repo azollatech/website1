@@ -205,7 +205,7 @@
 	}
 
 	$( document ).ready(function() {
-		$(window).bind("load", function() {
+		// $(window).bind("load", function() {
 			$("p.tagline, p.mobile-tagline").addClass('opaque');
 			setTimeout(function() {
 				$(".desktop .banner-button:nth(0), .mobile .banner-button:nth(0)").addClass('appear');
@@ -230,7 +230,7 @@
 
 			setInterval(function(){ fadeFrontSlide(); }, 6000);
 			setInterval(function(){ mobileFadeFrontSlide(); }, 6000);
-		});
+		// });
 	});
 	</script>
 @stop
