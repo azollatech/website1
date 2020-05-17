@@ -2,7 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 	<head>
         <meta charset="utf-8">
-		<meta name="viewport" content="width=1080, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 		<meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>{{ config('app.name') }} | @yield('title')</title>
@@ -99,7 +99,7 @@
 		<script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
 
 		{{-- Custom JS --}}
-		{{-- <script src="{{ asset('js/custom.js?v=1.0.0') }}"></script> --}}
+		<script src="{{ asset('js/custom.js?v=1.0.0') }}"></script>
 
 		@yield('js')
 	</body>

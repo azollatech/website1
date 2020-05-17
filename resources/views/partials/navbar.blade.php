@@ -12,5 +12,8 @@
         <li class="nav-item {{ Request::path() == '/d' ? 'active' : '' }}">
             <a class="nav-link" href="{{url('/')}}">加按套現</a>
         </li>
+        <li class="nav-item {{ Request::path() == '/e' ? 'active' : '' }}">
+            <a class="nav-link" href="{{url('/')}}">聯絡我們</a>
+        </li>
     </ul>
 </div>

@@ -23,7 +23,7 @@
 
         <div>
             <i class="fa fa-map-marker"></i>
-            <p>17/F A MW Tower 2, <span>5 Kimberly Road, Tsim Sha Tsui, Kowloon, Hong Kong</span></p>
+            <p class="address">17/F A MW Tower 2, <span>5 Kimberly Road, Tsim Sha Tsui, Kowloon, Hong Kong</span></p>
         </div>
 
         <div>

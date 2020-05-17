@@ -44,27 +44,77 @@
 			@include('partials.navbar')
 		</div>
 	</nav>
-	{{-- @include('partials.sidenav') --}}
+	@include('partials.sidenav')
 @stop
 
 @section('content')
-    <div id="banner" class="row position-relative">
-		{{-- <ul class="cb-slideshow">
+	<div id="mobile-banner" class="d-block d-md-none" style="overflow: auto;">
+		<ul class="cb-slideshow">
 			<li>
-				<span style="background-image: url({{url('/img/42521347552_07ffb97315_k.jpg')}})">Image 01</span>
+				<span style="background-image: url({{url('img/bg-2.png')}})" data-string="香港最全面銀行理財網絡">Image 02</span>
 			</li>
 			<li>
-				<span style="background-image: url({{url('img/1vfjxvkulpy.jpg')}})">Image 02</span>
+				<span style="background-image: url({{url('/img/42521347552_07ffb97315_k.jpg')}})" data-string="遠離破產危機">Image 01</span>
 			</li>
-		</ul> --}}
+		</ul>
+		<div class="position-absolute w-100">
+			<p class="mobile-tagline">
+				<span>香港最全面銀行理財網絡</span>
+			</p>
+
+			<div class="mobile banner-buttons-wrapper mb-4">
+				<div>
+					<div class="d-inline-block banner-button-wrapper-individual">
+						<div class="banner-button odd position-relative">
+							<div class="banner-button-diamond">
+								<img src="{{url('img/icn-1.png')}}"/>
+							</div>
+							<a class="banner-button-rect" href="#" style="background: #1C6678;">&nbsp;&nbsp;&nbsp;&nbsp;TU重組方案</a>
+						</div>
+					</div>
+					<div class="d-inline-block banner-button-wrapper-individual">
+						<div class="banner-button even position-relative">
+							<div class="banner-button-diamond">
+								<img src="{{url('img/icn-2.png')}}"/>
+							</div>
+							<a class="banner-button-rect" href="#" style="background: #D1AB59;">債務舒緩&nbsp;&nbsp;&nbsp;&nbsp;</a>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="d-inline-block banner-button-wrapper-individual">
+						<div class="banner-button odd position-relative">
+							<div class="banner-button-diamond">
+								<img src="{{url('img/icn-3.png')}}"/>
+							</div>
+							<a class="banner-button-rect" href="#" style="background: #4A987C;">&nbsp;&nbsp;&nbsp;&nbsp;物業套現</a>
+						</div>
+					</div>
+					<div class="d-inline-block banner-button-wrapper-individual">
+						<div class="banner-button even position-relative">
+							<div class="banner-button-diamond">
+								<img src="{{url('img/icn-4.png')}}"/>
+							</div>
+							<a class="banner-button-rect" href="#" style="background: #4A6A9C;">加按套現&nbsp;&nbsp;&nbsp;&nbsp;</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    <div id="banner" class="desktop row position-relative d-none d-md-block">
+		<ul class="cb-slideshow">
+			<li>
+				<span style="background-image: url({{url('img/bg-2.png')}})" data-string="香港最全面銀行理財網絡">Image 02</span>
+			</li>
+			<li>
+				<span style="background-image: url({{url('/img/42521347552_07ffb97315_k.jpg')}})" data-string="遠離破產危機">Image 01</span>
+			</li>
+		</ul>
         <div class="left-bg"></div>
         <div class="container">
             <div class="row">
-                <div class="left-bg-ref col-12 col-sm-4" style="
-                    height: 100%;
-                    padding-top: 180px;
-                    padding-left: 20px;
-                ">
+                <div class="left-bg-ref left-div col-12 col-md-4 col-lg-4">
                     <div class="banner-buttons-wrapper">
                         <div class="banner-button odd position-relative">
                             <div class="banner-button-diamond">
@@ -92,54 +142,14 @@
                         </div>
                     </div>
                 </div>
-                <div class="tagline col-12 col-sm-8" style="
-                    color: white;
-				    z-index: 2000;
-                    text-align: left;
-				    font-size: 2.8rem;
-				    font-weight: 700;
-                    letter-spacing: 2px;
-                    text-shadow: 0px 1px 4px rgba(0,0,0,0.5);
-                ">
-					<p class="tagline" style="display: none;">
-                    香港最全面銀行理財網絡</p>
+                <div class="tagline col-12 col-md-8 col-lg-8">
+					<p class="tagline">
+						<span>香港最全面銀行理財網絡</span><br>
+						<button class="btn text-white call-for-action mt-3">聯絡我們</button>
+					</p>
                 </div>
 
 				<style>
-					body{
-						background-color: #121212;
-					}
-
-					p.tagline {
-						border-right: solid 3px rgba(255,255,255,1);
-						white-space: nowrap;
-						overflow: hidden;
-						font-size: 2.8rem;
-						font-weight: 700;
-						color: rgba(255,255,255,1);
-					    margin-top: 340px;
-						padding-left: 36px;
-					}
-
-					/* Animation */
-					p.tagline.start {
-						animation: animated-text 2s steps(29,end) 1s 1 normal both,
-						animated-cursor 600ms steps(29,end) infinite;
-					}
-
-					/* text animation */
-
-					@keyframes animated-text{
-						from{width: 0;}
-						to{width: 556px;}
-					}
-
-					/* cursor animations */
-
-					@keyframes animated-cursor{
-						from{border-right-color: rgba(255,255,255,1);}
-						to{border-right-color: transparent;}
-					}
 				</style>
             </div>
         </div>
@@ -152,160 +162,55 @@
 
 @section('css')
     <style>
-		body {
-		    overflow-x: hidden;
-		}
-
-.cb-slideshow,
-.cb-slideshow:after {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0px;
-    left: 0px;
-    z-index: 0;
-}
-/* .cb-slideshow:after {
-    content: '';
-    background: transparent url(../images/pattern.png) repeat top left;
-} */
-.cb-slideshow li span {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    color: transparent;
-    background-size: cover;
-    background-position: 50% 50%;
-    background-repeat: none;
-    z-index: 0;
-	-webkit-backface-visibility: hidden;
-}
-.cb-slideshow li span.invisible {
-	opacity: 0;
-}
-        #banner {
-            height: 100vh;
-		    max-height: 1080px;
-            -moz-background-size:cover;
-            -webkit-background-size:cover;
-            -o-background-size:cover;
-            background-size:cover;
-            background: url({{url('/')}}/img/42521347552_07ffb97315_k.jpg) no-repeat center center;
-        }
-        .banner-buttons-wrapper {
-        }
-        .banner-button {
-            margin-bottom: 80px!important;
-			opacity: 0;
-			transition: opacity 1.5s;
-        }
-		.banner-button.appear {
-			opacity: 1;
-		}
-        .banner-button-rect {
-		    z-index: 100;
-            max-width: 240px;
-            display: block;
-            color: #444;
-            text-shadow: 0px 1px 4px rgba(0,0,0,0.5);
-            box-shadow: 0 3px 6px 1px rgba(0,0,0,0.2);
-            cursor: pointer;
-            vertical-align: middle;
-            padding: 6px;
-            text-align: center;
-            font-size: 1.3rem;
-            color: white;
-            border-radius: 4px;
-            height: 48px;
-            line-height: 36px;
-		    padding-left: 0;
-			transition: all .5s;
-			-webkit-transition: all .5s;
-        }
-        .banner-button-rect:hover {
-            color: white;
-		    box-shadow: 0 3px 6px 1px rgba(0,0,0,0.4);
-		    text-shadow: 0px 1px 4px rgba(0,0,0,0.7);
-        }
-        .banner-button-diamond {
-			cursor: pointer;
-		    z-index: 200;
-            background: white;
-            width: 56px;
-            height: 56px;
-            border-radius: 6px;
-            position: absolute;
-            top: -4px;
-            left: -24px;
-            transform: rotate(45deg);
-            border: 1px solid rgba(0,0,0,0.2);
-            /* box-shadow: 0px 2px 16px 0px rgba(0,0,0,0.3); */
-            box-shadow: 0px 2px 28px 0px rgba(0,0,0,0.6);
-		    transform: rotate(45deg) scale(1);
-			transition: transform .5s;
-        }
-		.banner-button:hover .banner-button-diamond {
-			transform: rotate(45deg) scale(1.1);
-		}
-		.banner-button.odd:hover .banner-button-rect {
-		    padding-left: 24px;
-			-webkit-filter: brightness(120%);
-			filter: brightness(120%);
-		}
-		.banner-button.even:hover .banner-button-rect {
-			padding-right: 24px;
-			-webkit-filter: brightness(120%);
-			filter: brightness(120%);
-		}
-        .banner-button.odd {
-            margin-left: 32px;
-        }
-        .banner-button.even .banner-button-diamond {
-           left: 212px;
-        }
-		.banner-button .banner-button-diamond img {
-		    width: 42px;
-		    height: 42px;
-		    transform: rotate(-45deg);
-		    margin-left: 6px;
-		    margin-top: 6px;
-		}
-        .left-bg {
-			width: 0;
-            background: rgba(51, 52, 60, 0.71);
-            height: 100%;
-            position: absolute;
-			transition: width 1s;
-        }
-		footer {
-			z-index: 1;
-		}
     </style>
 @stop
 
 @section('js')
 	<script>
 
-	function changeBG() {
+	function fadeFrontSlide() {
+		$(".desktop .cb-slideshow li:last span").addClass('fade-out');
+		var text = $(".desktop .cb-slideshow li:last span").attr("data-string");
+		$(".desktop p.tagline").addClass('fade-out');
 		setTimeout(function() {
-			$(".cb-slideshow li span").addClass('invisible');
-		}, 600);
+			$(".desktop p.tagline span").text(text);
+			setTimeout(function() {
+				$(".desktop p.tagline").removeClass('fade-out');
+			}, 300);
+		}, 300);
+		setTimeout(function() {
+			$(".desktop .cb-slideshow li:first").appendTo('.desktop .cb-slideshow');
+			$(".desktop .cb-slideshow li span.fade-out").removeClass('fade-out');
+		}, 3500);
+	}
+
+	function mobileFadeFrontSlide() {
+		$("#mobile-banner .cb-slideshow li:last span").addClass('fade-out');
+		var text = $("#mobile-banner .cb-slideshow li:last span").attr("data-string");
+		$("p.mobile-tagline").addClass('fade-out');
+		setTimeout(function() {
+			$("p.mobile-tagline span").text(text);
+			setTimeout(function() {
+				$("p.mobile-tagline").removeClass('fade-out');
+			}, 300);
+		}, 300);
+		setTimeout(function() {
+			$("#mobile-banner .cb-slideshow li:first").appendTo('#mobile-banner .cb-slideshow');
+			$("#mobile-banner .cb-slideshow li span.fade-out").removeClass('fade-out');
+		}, 3500);
 	}
 
 	$( document ).ready(function() {
 		$(window).bind("load", function() {
-			$("p.tagline").show();
-			$("p.tagline").addClass("start");
+			$("p.tagline, p.mobile-tagline").addClass('opaque');
 			setTimeout(function() {
-				$(".banner-button:nth(0)").addClass('appear');
+				$(".desktop .banner-button:nth(0), .mobile .banner-button:nth(0)").addClass('appear');
 				setTimeout(function() {
-					$(".banner-button:nth(1)").addClass('appear');
+					$(".desktop .banner-button:nth(1), .mobile .banner-button:nth(1)").addClass('appear');
 					setTimeout(function() {
-						$(".banner-button:nth(2)").addClass('appear');
+						$(".desktop .banner-button:nth(2), .mobile .banner-button:nth(2)").addClass('appear');
 						setTimeout(function() {
-							$(".banner-button:nth(3)").addClass('appear');
+							$(".desktop .banner-button:nth(3), .mobile .banner-button:nth(3)").addClass('appear');
 						}, 200);
 					}, 200);
 				}, 200);
@@ -318,6 +223,9 @@
 		        var w = $(".left-bg-ref").position().left + $(".left-bg-ref").outerWidth();
 		        $(".left-bg").css({'width': w+'px'});
 		    });
+
+			setInterval(function(){ fadeFrontSlide(); }, 6000);
+			setInterval(function(){ mobileFadeFrontSlide(); }, 6000);
 		});
 	});
 	</script>
