@@ -149,7 +149,10 @@
                 <div class="tagline col-12 col-md-8 col-lg-8">
 					<p class="tagline">
 						<span>香港最全面銀行理財網絡</span><br>
-						<button class="btn text-white call-for-action mt-3">聯絡我們</button>
+						<button class="btn text-white call-for-action mt-3" data-href="https://api.whatsapp.com/send?phone=85298765432&amp;text=%E6%88%91%E6%83%B3%E4%BA%86%E8%A7%A3%E6%9B%B4%E5%A4%9A">
+						<i class="fa fa-whatsapp" aria-hidden="true" style="font-size: 18px;"></i> WhatsApp聯絡</button>
+						<button class="btn text-white call-for-action secondary mt-3" data-href="{{url('/contact-us')}}">
+						<i class="fa fa-mobile" aria-hidden="true" style="font-size: 20px;"></i> 其他聯絡方式</button>
 					</p>
                 </div>
 
@@ -158,6 +161,28 @@
             </div>
         </div>
     </div>
+	<div class="d-block d-md-none position-fixed w-100" style="bottom: 0;box-shadow: 0 2px 4px 4px rgba(0,0,0,0.2);z-index: 3000;">
+		<div class="call-for-action-bar" data-href="https://api.whatsapp.com/send?phone=85298765432&amp;text=%E6%88%91%E6%83%B3%E4%BA%86%E8%A7%A3%E6%9B%B4%E5%A4%9A" style="
+		    color: white;
+		    background: #4DC55A;
+		    text-align: center;
+		    height: 40px;
+		    font-size: 16px;
+		    line-height: 40px;">
+			<i class="fa fa-whatsapp" aria-hidden="true" style="font-size: 18px;"></i>
+			<span class="fusion-button-text">&nbsp;Whatsapp立即聯絡</span>
+		</div>
+		<div class="call-for-action-bar" data-href="{{url('/contact-us')}}" style="
+		    color: white;
+		    background: #555;
+		    text-align: center;
+		    height: 40px;
+		    font-size: 16px;
+		    line-height: 40px;">
+			<i class="fa fa-mobile" aria-hidden="true" style="font-size: 20px;"></i>
+			<span class="fusion-button-text">&nbsp;其他聯絡方式</span>
+		</div>
+	</div>
 	<div class="position-relative">
 	</div>
 	<div class="container">
@@ -231,6 +256,13 @@
 			setInterval(function(){ fadeFrontSlide(); }, 6000);
 			setInterval(function(){ mobileFadeFrontSlide(); }, 6000);
 		// });
+
+		$(".call-for-action, .call-for-action-bar").click(function() {
+			var link = $(this).attr("data-href");
+			if(link) {
+				window.open(link);
+			}
+		});
 	});
 	</script>
 @stop
