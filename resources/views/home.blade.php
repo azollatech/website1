@@ -26,36 +26,36 @@
 				<div>
 					<div class="d-inline-block banner-button-wrapper-individual">
 						<div class="banner-button odd position-relative">
-							<div class="banner-button-diamond">
+							<div class="banner-button-diamond" data-href="{{url('tu-debt-restructuring')}}">
 								<img src="{{url('img/icn-1.png')}}"/>
 							</div>
-							<a class="banner-button-rect" href="#" style="background: #1C6678;">&nbsp;&nbsp;&nbsp;&nbsp;TU重組方案</a>
+							<a class="banner-button-rect" href="{{url('tu-debt-restructuring')}}" style="background: #1C6678;">&nbsp;&nbsp;&nbsp;&nbsp;TU重組方案</a>
 						</div>
 					</div>
 					<div class="d-inline-block banner-button-wrapper-individual">
 						<div class="banner-button even position-relative">
-							<div class="banner-button-diamond">
+							<div class="banner-button-diamond" data-href="{{url('debt-relief-loan')}}">
 								<img src="{{url('img/icn-2.png')}}"/>
 							</div>
-							<a class="banner-button-rect" href="#" style="background: #D1AB59;">債務舒緩&nbsp;&nbsp;&nbsp;&nbsp;</a>
+							<a class="banner-button-rect" href="{{url('debt-relief-loan')}}" style="background: #D1AB59;">債務舒緩&nbsp;&nbsp;&nbsp;&nbsp;</a>
 						</div>
 					</div>
 				</div>
 				<div>
 					<div class="d-inline-block banner-button-wrapper-individual">
 						<div class="banner-button odd position-relative">
-							<div class="banner-button-diamond">
+							<div class="banner-button-diamond" data-href="{{url('mortgage-loan')}}">
 								<img src="{{url('img/icn-3.png')}}"/>
 							</div>
-							<a class="banner-button-rect" href="#" style="background: #4A987C;">&nbsp;&nbsp;&nbsp;&nbsp;物業套現</a>
+							<a class="banner-button-rect" href="{{url('mortgage-loan')}}" style="background: #4A987C;">&nbsp;&nbsp;&nbsp;&nbsp;物業套現</a>
 						</div>
 					</div>
 					<div class="d-inline-block banner-button-wrapper-individual">
 						<div class="banner-button even position-relative">
-							<div class="banner-button-diamond">
+							<div class="banner-button-diamond" data-href="{{url('property-refinancing')}}">
 								<img src="{{url('img/icn-4.png')}}"/>
 							</div>
-							<a class="banner-button-rect" href="#" style="background: #4A6A9C;">加按套現&nbsp;&nbsp;&nbsp;&nbsp;</a>
+							<a class="banner-button-rect" href="{{url('property-refinancing')}}" style="background: #4A6A9C;">加按套現&nbsp;&nbsp;&nbsp;&nbsp;</a>
 						</div>
 					</div>
 				</div>
@@ -77,28 +77,28 @@
                 <div class="left-bg-ref left-div col-12 col-md-4 col-lg-4">
                     <div class="banner-buttons-wrapper">
                         <div class="banner-button odd position-relative">
-                            <div class="banner-button-diamond">
+                            <div class="banner-button-diamond" data-href="{{url('tu-debt-restructuring')}}">
 								<img src="{{url('img/icn-1.png')}}"/>
 							</div>
-                            <a class="banner-button-rect" href="#" style="background: #1C6678;">&nbsp;&nbsp;&nbsp;&nbsp;TU重組方案</a>
+                            <a class="banner-button-rect" href="{{url('tu-debt-restructuring')}}" style="background: #1C6678;">&nbsp;&nbsp;&nbsp;&nbsp;TU重組方案</a>
                         </div>
                         <div class="banner-button even position-relative">
-                            <div class="banner-button-diamond">
+                            <div class="banner-button-diamond" data-href="{{url('debt-relief-loan')}}">
 								<img src="{{url('img/icn-2.png')}}"/>
 							</div>
-                            <a class="banner-button-rect" href="#" style="background: #D1AB59;">債務舒緩&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                            <a class="banner-button-rect" href="{{url('debt-relief-loan')}}" style="background: #D1AB59;">債務舒緩&nbsp;&nbsp;&nbsp;&nbsp;</a>
                         </div>
                         <div class="banner-button odd position-relative">
-                            <div class="banner-button-diamond">
+                            <div class="banner-button-diamond" data-href="{{url('mortgage-loan')}}">
 								<img src="{{url('img/icn-3.png')}}"/>
 							</div>
-                            <a class="banner-button-rect" href="#" style="background: #4A987C;">&nbsp;&nbsp;&nbsp;&nbsp;物業套現</a>
+                            <a class="banner-button-rect" href="{{url('mortgage-loan')}}" style="background: #4A987C;">&nbsp;&nbsp;&nbsp;&nbsp;物業套現</a>
                         </div>
                         <div class="banner-button even position-relative">
-                            <div class="banner-button-diamond">
+                            <div class="banner-button-diamond" data-href="{{url('property-refinancing')}}">
 								<img src="{{url('img/icn-4.png')}}"/>
 							</div>
-                            <a class="banner-button-rect" href="#" style="background: #4A6A9C;">加按套現&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                            <a class="banner-button-rect" href="{{url('property-refinancing')}}" style="background: #4A6A9C;">加按套現&nbsp;&nbsp;&nbsp;&nbsp;</a>
                         </div>
                     </div>
                 </div>
@@ -250,7 +250,7 @@
 			setInterval(function(){ mobileFadeFrontSlide(); }, 6000);
 		// });
 
-		$(".call-for-action, .call-for-action-bar").click(function() {
+		$(".call-for-action, .call-for-action-bar, .banner-button-diamond").click(function() {
 			var link = $(this).attr("data-href");
 			if(link) {
 				window.open(link);
