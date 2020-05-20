@@ -3,51 +3,7 @@
 @section('title', __('Home'))
 
 @section('navbar')
-	<nav class="navbar navbar-expand-lg navbar-light py-3" style="
-    position: fixed;
-    z-index: 10000;
-    width: 100%;
-    top: 0;
-    background: rgba(51, 52, 60, 0.91);
-    background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(51, 52, 60, 0.91) 70%);
-    ">
-		<div class="container position-relative">
-			<a class="navbar-brand" href="{{url('/')}}">
-				<h1 class="text-white" style="
-				    font-size: 1.7rem;
-				    letter-spacing: 1px;
-				    text-shadow: 0px 1px 4px rgba(0,0,0,0.3);">還原理財中心</h1>
-			</a>
-			<button class="hamburger d-block d-lg-none" style="
-			    top: 2px;
-			    padding: 0;
-			    height: 32px;
-			    width: 32px;"><i class="material-icons md-32">menu</i></button>
-			@include('partials.navbar')
-		</div>
-	</nav>
-
-	<nav id="hidden-navbar" class="navbar navbar-expand-lg navbar-light" style="
-    position: fixed;
-	top: -86px;
-    z-index: 1000;
-	background: #fff;
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
-    width: 100%;">
-		<div class="container position-relative">
-			<a class="navbar-brand" href="{{url('/')}}">
-				<h1>還原理財中心</h1>
-			</a>
-			<button class="hamburger d-block d-lg-none" style="
-		    margin: 0;
-		    position: absolute;
-		    top: 50%;
-		    right: 0;
-		    transform: translate(0, -50%);
-			"><i class="material-icons md-32">menu</i></button>
-			@include('partials.navbar')
-		</div>
-	</nav>
+	@include('partials.navbar-wrapper')
 	@include('partials.sidenav')
 @stop
 
@@ -161,6 +117,43 @@
             </div>
         </div>
     </div>
+	{{-- <section class="bg-light py-5">
+		<div class="container">
+			<div class="fusion-text">
+				<h2 style="text-align: center;" data-fontsize="34" data-lineheight="50">全方位線上線下服務</h2>
+			</div>
+			<div class="separator" style="border-color:#ef9a3d;border-top-width:1px;margin-left: auto;margin-right: auto;margin-top:15px;margin-bottom:35px;width:100%;max-width:170px;"></div>
+			<div class="row" data-animationoffset="100%" style="margin-top:0px;margin-bottom:60px;">
+				<div class="col-lg-4 col-md-4 col-sm-4">
+					<div class="heading heading-with-icon icon-left">
+						<a class="heading-link" href="tel://+85251666526" target="_self">
+							<div class="icon"><i style="border-color:#f44336;border-width:3px;background-color:#f7f7f7;box-sizing:content-box;height:100px;width:100px;line-height:100px;border-radius:50%;color:#f44336;font-size:50px;" class="fontawesome-icon fa-mobile-alt fas circle-yes"></i></div>
+							<h2 class="content-box-heading" style="font-size:26px;line-height:31px;" data-inline-fontsize="26px" data-inline-lineheight="31px" data-fontsize="26" data-lineheight="31">電話查詢</h2>
+						</a>
+					</div>
+					<div class="content-container" style="color:#7e8890;">
+						<p style="text-align: center;">最直接的方式, 同時我們的顧問可作出專業解答及方案</p>
+					</div>
+					<a class="read-more-button" href="tel://+85251666526" target="_self">
+						<span class="button-text">立即致電</span>
+					</a>
+				</div>
+
+				<div class="fusion-column content-box-column content-box-column content-box-column-2 col-lg-4 col-md-4 col-sm-4 fusion-content-box-hover "><div class="col content-box-wrapper content-wrapper-background link-area-link-icon link-type-button icon-hover-animation-slide" style="background-color:#faf9f8;" data-animationoffset="100%"><div class="heading heading-with-icon icon-left"><a class="heading-link" href="http://dsc.com.hk/%e8%81%af%e7%b5%a1%e6%88%91%e5%80%91/" target="_self"><div class="icon"><i style="border-color:#8bc34a;border-width:3px;background-color:#f7f7f7;box-sizing:content-box;height:100px;width:100px;line-height:100px;border-radius:50%;color:#8bc34a;font-size:50px;" class="fontawesome-icon fa-whatsapp fab circle-yes"></i></div><h2 class="content-box-heading" style="font-size:26px;line-height:31px;" data-inline-fontsize="26px" data-inline-lineheight="31px" data-fontsize="26" data-lineheight="31">WHATSAPP、微信查詢</h2></a></div><div class="fusion-clearfix"></div><div class="content-container" style="color:#7e8890;">
+					<p style="text-align: center;">無論何時何地, 只要一機在手, 都可以隨時作出查緝. 讓隱密度更高</p>
+				</div><div class="fusion-clearfix"></div><a class="fusion-read-more-button fusion-content-box-button fusion-button button-default button-large button- button-flat" href="http://dsc.com.hk/%e8%81%af%e7%b5%a1%e6%88%91%e5%80%91/" target="_self"><span class="fusion-button-text">了解更多</span></a><div class="fusion-clearfix"></div></div></div><div class="fusion-column content-box-column content-box-column content-box-column-3 col-lg-4 col-md-4 col-sm-4 fusion-content-box-hover content-box-column-last content-box-column-last-in-row"><div class="col content-box-wrapper content-wrapper-background link-area-link-icon link-type-button icon-hover-animation-slide" style="background-color:#faf9f8;" data-animationoffset="100%"><div class="heading heading-with-icon icon-left"><a class="heading-link" href="http://dsc.com.hk/%e8%81%af%e7%b5%a1%e6%88%91%e5%80%91/" target="_self"><div class="icon"><i style="border-color:#03a9f4;border-width:3px;background-color:#f7f7f7;box-sizing:content-box;height:100px;width:100px;line-height:100px;border-radius:50%;color:#03a9f4;font-size:50px;" class="fontawesome-icon fa-envelope-open far circle-yes"></i></div><h2 class="content-box-heading" style="font-size:26px;line-height:31px;" data-inline-fontsize="26px" data-inline-lineheight="31px" data-fontsize="26" data-lineheight="31">電郵查詢</h2></a></div><div class="fusion-clearfix"></div><div class="content-container" style="color:#7e8890;">
+					<p style="text-align: center;">相對比較簡接, 但同時可將所需文件發出, 節省更多時間</p>
+				</div><div class="fusion-clearfix"></div><a class="fusion-read-more-button fusion-content-box-button fusion-button button-default button-large button- button-flat" href="http://dsc.com.hk/%e8%81%af%e7%b5%a1%e6%88%91%e5%80%91/" target="_self"><span class="fusion-button-text">了解更多</span></a><div class="fusion-clearfix"></div></div></div><style type="text/css">
+				.fusion-content-boxes-1 .fusion-content-box-hover .heading-link:hover .icon i.circle-yes,
+				.fusion-content-boxes-1 .fusion-content-box-hover .link-area-box:hover .heading-link .icon i.circle-yes,
+				.fusion-content-boxes-1 .fusion-content-box-hover .link-area-link-icon-hover .heading .icon i.circle-yes,
+				.fusion-content-boxes-1 .fusion-content-box-hover .link-area-box-hover .heading .icon i.circle-yes {
+					background-color: #464d5f !important;
+					border-color: #464d5f !important;
+					}</style><div class="fusion-clearfix"></div></div><div class="fusion-clearfix"></div>
+
+				</div>
+	</section> --}}
 	<div class="d-block d-md-none position-fixed w-100" style="bottom: 0;box-shadow: 0 2px 4px 4px rgba(0,0,0,0.2);z-index: 3000;">
 		<div class="call-for-action-bar" data-href="https://api.whatsapp.com/send?phone=85298765432&amp;text=%E6%88%91%E6%83%B3%E4%BA%86%E8%A7%A3%E6%9B%B4%E5%A4%9A" style="
 		    color: white;
