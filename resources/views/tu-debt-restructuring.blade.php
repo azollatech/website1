@@ -8,20 +8,7 @@
 @stop
 
 @section('content')
-    <div class="header-banner" style="
-        height: 280px;
-        background: url({{url('/')}}/img/banner-1-darken.jpg);
-        background-position: center center;
-        background-size: cover;">
-        <h2 style="
-            font-size: 2.8rem;
-            color: #ffffff;
-            font-weight: 700;
-            text-align: center;
-            letter-spacing: 2px;
-            padding-top: 120px;
-        ">TU重組方案</2>
-    </div>
+	@include('partials.header-banner', ["image"=>"banner-1-darken.jpg", "title"=>"TU重組方案"])
     <section class="py-5" style="background: #fafafa;">
     	<div class="container">
             <div class="mb-5">

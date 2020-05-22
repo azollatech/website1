@@ -585,6 +585,7 @@ background: transparent url(../images/pattern.png) repeat top left;
 }
 #banner {
     height: 100vh;
+    min-height: 800px;
     max-height: 860px;
     -moz-background-size:cover;
     -webkit-background-size:cover;
@@ -594,7 +595,7 @@ background: transparent url(../images/pattern.png) repeat top left;
 .banner-buttons-wrapper {
 }
 .banner-button {
-    margin-bottom: 80px!important;
+    margin-bottom: 60px!important;
     opacity: 0;
     transition: opacity 1.5s;
 }
@@ -765,6 +766,25 @@ footer {
 footer .address {
     width: 240px;
 }
+.header-banner {
+    height: 280px;
+}
+.header-title {
+    padding-top: 120px;
+}
+
+/* Contact Us */
+.contact-now-buttons {
+    height: 44px;
+    border-radius: 44px;
+    max-width: 240px;
+    color: white;
+    margin: auto;
+    font-size: 16px;
+}
+.contact-now-buttons:hover {
+    background-color: #3d405c!important;
+}
 
 /* Extra large devices (large desktops, 1200px and up) */
 /* No media query since this is the default in Bootstrap */
@@ -815,6 +835,9 @@ footer .address {
         padding-top: 180px;
         padding-left: 12px;
     }
+    .header-banner {
+        height: 260px;
+    }
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -847,6 +870,12 @@ footer .address {
     .cb-slideshow,
     #mobile-banner {
         height: 640px;
+    }
+    .header-banner {
+        height: 220px;
+    }
+    .header-title {
+        padding-top: 110px;
     }
 }
 
@@ -894,7 +923,13 @@ footer .address {
     }
     .cb-slideshow,
     #mobile-banner {
-        height: 560px;
+        height: 600px;
+    }
+    .header-banner {
+        height: 190px;
+    }
+    .header-title {
+        padding-top: 90px;
     }
 }
 /* Ultra small */
@@ -922,5 +957,11 @@ footer .address {
     }
     .mobile .banner-button-wrapper-individual {
         display: block!important;
+    }
+    .header-banner {
+        height: 160px;
+    }
+    .header-title {
+        padding-top: 80px;
     }
 }

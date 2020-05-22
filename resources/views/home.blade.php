@@ -53,9 +53,19 @@
 					<div class="d-inline-block banner-button-wrapper-individual">
 						<div class="banner-button even position-relative">
 							<div class="banner-button-diamond" data-href="{{url('property-refinancing')}}">
-								<img src="{{url('img/icn-4.png')}}"/>
+								<img src="{{url('img/icn-5.png')}}"/>
 							</div>
 							<a class="banner-button-rect" href="{{url('property-refinancing')}}" style="background: #4A6A9C;">加按套現&nbsp;&nbsp;&nbsp;&nbsp;</a>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="d-inline-block banner-button-wrapper-individual">
+						<div class="banner-button odd position-relative">
+							<div class="banner-button-diamond" data-href="{{url('bankruptcy-consultation')}}">
+								<img src="{{url('img/icn-4.png')}}"/>
+							</div>
+							<a class="banner-button-rect" href="{{url('bankruptcy-consultation')}}" style="background: #D18059;">&nbsp;&nbsp;&nbsp;&nbsp;破產諮詢</a>
 						</div>
 					</div>
 				</div>
@@ -96,9 +106,15 @@
                         </div>
                         <div class="banner-button even position-relative">
                             <div class="banner-button-diamond" data-href="{{url('property-refinancing')}}">
-								<img src="{{url('img/icn-4.png')}}"/>
+								<img src="{{url('img/icn-5.png')}}"/>
 							</div>
                             <a class="banner-button-rect" href="{{url('property-refinancing')}}" style="background: #4A6A9C;">加按套現&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                        </div>
+                        <div class="banner-button odd position-relative">
+                            <div class="banner-button-diamond" data-href="{{url('bankruptcy-consultation')}}">
+								<img src="{{url('img/icn-4.png')}}"/>
+							</div>
+                            <a class="banner-button-rect" href="{{url('bankruptcy-consultation')}}" style="background: #D18059;">&nbsp;&nbsp;&nbsp;&nbsp;破產諮詢</a>
                         </div>
                     </div>
                 </div>
@@ -117,9 +133,109 @@
             </div>
         </div>
     </div>
-	{{-- <section class="bg-light py-5">
+
+	<section class="py-5" style="background: #fafafa;">
 		<div class="container">
-			<div class="fusion-text">
+			<div class="my-5">
+				<div class="text-center">
+					<div>
+						<h2>全方位線上線下服務</h2>
+					</div>
+					<div class="separator" style="
+						margin: auto;
+						margin-top: 15px;
+						margin-bottom: 35px;
+						width: 100%;
+						max-width: 170px;
+						min-height: 2px;
+						background: #dddddd;"></div>
+
+					<div class="row">
+						<div class="col-12 col-md-4 text-center mb-5">
+							<div class="link-area-link-icon link-type-button icon-hover-animation-slide">
+								<i class="fontawesome-icon circle-yes fa fa-mobile" aria-hidden="true" style="
+								    border: 3px solid #f44336;
+								    background-color: #f7f7f7;
+								    box-sizing: content-box;
+								    height: 100px;
+								    width: 100px;
+								    line-height: 100px;
+								    border-radius: 50%;
+								    color: #f44336;
+								    font-size: 80px;"></i>
+							</div>
+							<div style="
+							    font-size: 26px;
+							    line-height: 31px;
+								font-weight: 700;
+							    line-height: 50px;
+							    letter-spacing: 0px;
+							    font-style: normal;
+								margin-top: 4px;
+							    color: #3d405c;">電話查詢</div>
+							<div>最直接的方式，同時我們的顧問可作出專業解答及方案</div>
+							<a href="tel://98765432">
+								<button class="contact-now-buttons btn btn-primary btn-block mt-3" style="background-color: #D5382D;">立即致電</button>
+							</a>
+						</div>
+						<div class="col-12 col-md-4 text-center mb-5">
+							<div class="link-area-link-icon link-type-button icon-hover-animation-slide">
+								<i class="fontawesome-icon circle-yes fa fa-whatsapp" aria-hidden="true" style="
+								    border: 3px solid #8bc34a;
+								    background-color: #f7f7f7;
+								    box-sizing: content-box;
+								    height: 100px;
+								    width: 100px;
+								    line-height: 100px;
+								    border-radius: 50%;
+								    color: #8bc34a;
+								    font-size: 50px;"></i>
+							</div>
+							<div style="
+							    font-size: 26px;
+							    line-height: 31px;
+								font-weight: 700;
+							    line-height: 50px;
+							    letter-spacing: 0px;
+							    font-style: normal;
+								margin-top: 4px;
+							    color: #3d405c;">WHATSAPP查詢</div>
+							<div>無論何時何地，只要一機在手，都可以隨時作出查詢，隱密度更高。</div>
+							<a href="https://api.whatsapp.com/send?phone=85298765432&text=%E6%88%91%E6%83%B3%E4%BA%86%E8%A7%A3%E6%9B%B4%E5%A4%9A">
+								<button class="contact-now-buttons btn btn-primary btn-block mt-3" style="background-color: green;">立即WHATSAPP</button>
+							</a>
+						</div>
+						<div class="col-12 col-md-4 text-center mb-5">
+							<div class="link-area-link-icon link-type-button icon-hover-animation-slide">
+								<i class="fontawesome-icon circle-yes fa fa-whatsapp" aria-hidden="true" style="
+								    border: 3px solid #03a9f4;
+								    background-color: #f7f7f7;
+								    box-sizing: content-box;
+								    height: 100px;
+								    width: 100px;
+								    line-height: 100px;
+								    border-radius: 50%;
+								    color: #03a9f4;
+								    font-size: 50px;"></i>
+							</div>
+							<div style="
+							    font-size: 26px;
+							    line-height: 31px;
+								font-weight: 700;
+							    line-height: 50px;
+							    letter-spacing: 0px;
+							    font-style: normal;
+								margin-top: 4px;
+							    color: #3d405c;">電郵查詢</div>
+							<div>相對比較簡接，但同時可將所需文件發出，節省更多時間</div>
+							<a href="mailto:contact@example.com"><button class="contact-now-buttons btn btn-primary btn-block mt-3" style="background-color: #028ecf;">立即EMAIL</button></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+			{{--<div class="fusion-text">
 				<h2 style="text-align: center;" data-fontsize="34" data-lineheight="50">全方位線上線下服務</h2>
 			</div>
 			<div class="separator" style="border-color:#ef9a3d;border-top-width:1px;margin-left: auto;margin-right: auto;margin-top:15px;margin-bottom:35px;width:100%;max-width:170px;"></div>
@@ -182,8 +298,18 @@
 	</div>
 @stop
 
+
 @section('css')
     <style>
+		.link-area-link-icon {
+			cursor: pointer;
+		}
+		.link-area-link-icon-hover i.circle-yes {
+			/* background-color: #464d5f !important; */
+			/* border-color: #464d5f !important; */
+			background-color: #3d405c !important;
+			border-color: #3d405c !important;
+		}
     </style>
 @stop
 
@@ -233,6 +359,9 @@
 						$(".desktop .banner-button:nth(2), .mobile .banner-button:nth(2)").addClass('appear');
 						setTimeout(function() {
 							$(".desktop .banner-button:nth(3), .mobile .banner-button:nth(3)").addClass('appear');
+							setTimeout(function() {
+								$(".desktop .banner-button:nth(4), .mobile .banner-button:nth(4)").addClass('appear');
+							}, 200);
 						}, 200);
 					}, 200);
 				}, 200);
@@ -256,6 +385,23 @@
 				window.open(link);
 			}
 		});
+
+		$(".icon-hover-animation-slide").hover(
+			function() {
+				$(this).addClass('link-area-link-icon-hover');
+			},
+			function() {
+				$(this).removeClass('link-area-link-icon-hover');
+			}
+		)
+		$(".contact-now-buttons").hover(
+			function() {
+				$(this).parent().find(".icon-hover-animation-slide").addClass('link-area-link-icon-hover');
+			},
+			function() {
+				$(this).parent().find(".icon-hover-animation-slide").removeClass('link-area-link-icon-hover');
+			}
+		)
 	});
 	</script>
 @stop
