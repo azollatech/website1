@@ -772,6 +772,9 @@ footer .address {
 .header-title {
     padding-top: 120px;
 }
+.back-to-top {
+    cursor: pointer;
+}
 
 /* Contact Us */
 .contact-now-buttons {

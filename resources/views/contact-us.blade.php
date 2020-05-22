@@ -109,7 +109,7 @@
 							    letter-spacing: 0px;
 							    font-style: normal;
 								margin-top: 4px;
-							    color: #3d405c;">一鍵電話致電</div>
+							    color: #3d405c;">一鍵電話查詢</div>
 							<a href="https://api.whatsapp.com/send?phone=85298765432&text=%E6%88%91%E6%83%B3%E4%BA%86%E8%A7%A3%E6%9B%B4%E5%A4%9A">
 								<button class="contact-now-buttons btn btn-primary btn-block mt-3" style="background-color: #D5382D;">立即致電</button>
 							</a>

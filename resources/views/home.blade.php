@@ -292,9 +292,87 @@
 			<span class="fusion-button-text">&nbsp;其他聯絡方式</span>
 		</div>
 	</div>
-	<div class="position-relative">
-	</div>
-	<div class="container">
+
+	{{-- <section>
+		<div id="contact-us" class="contact container-fluid" data-parallax="scroll" data-image-src="img/home/contact-bg.jpg">
+			<div class="row h-100" style="background-color: rgb(15, 76, 133, 0.9);">
+				<div class="overlay" style="width: 35%">
+				</div>
+				<div class="" style="width: 65%">
+				</div>
+				<div class="position-absolute w-100">
+					<div class="d-lg-none" style="background-color: rgba(0, 48, 91, 0.5); height: 132px; position: absolute; width: 100%;">
+					</div>
+					<div class="container">
+						<div class="row mobile-disable-padding" style="padding-top: 120px;">
+							<div class="col-md-12 col-lg-5 mobile-tint" style="overflow: hidden;">
+								<h2 class="font_2 text-white fadethis" style="width: 307px;">
+									@lang('home.contact-koinplus')
+								</h2>
+							</div>
+							<div class="col-md-12 col-lg-7">
+								<div class="text-white">
+									<h6 class="font_6 text-white fadethis" style="line-height:2em;"><b>@lang('home.service-hour')</b></h6>
+									<p class="font_8 text-white fadethis" style="line-height:2em;">@lang('home.service-hour-content')</p>
+									<br>
+
+									<h6 class="font_6 text-white fadethis" style="line-height:2em;"><b>@lang('home.contact')</b></h6>
+									<p class="font_8 text-white fadethis" style="line-height:2em;">@lang('home.email'):&nbsp;
+										<a class="inline-link-with-underline" href="mailto:contact@koinplus.co" target="_self" data-content="contact@koinplus.co" data-type="mail">contact@koinplus.co</a>
+									</p>
+									<p class="font_8 text-white fadethis" style="line-height:2em;">Facebook @lang('home.page'):&nbsp;
+										<a class="inline-link-with-underline" href="https://www.facebook.com/koinplus.hk" target="_blank" data-content="https://www.facebook.com/koinplus.hk" data-type="external" rel="nofollow">https://www.facebook.com/koinplus.hk</a>
+									</p>
+									<p class="font_8 text-white fadethis" style="line-height:2em;">Facebook Messenger:&nbsp;
+										<a class="inline-link-with-underline" href="https://m.me/koinplus.hk" target="_blank" data-content="https://m.me/koinplus.hk" data-type="external" rel="nofollow">https://m.me/koinplus.hk</a>
+									</p>
+									<br>
+
+									<p class="font_8 text-white fadethis" style="line-height:2em;">@lang('home.contact-form-instruction')</p>
+									<br>
+
+									<form id="contact-form" method="post" action="{{url('/contact-form')}}">
+										{{ csrf_field() }}
+										<div class="row no-gutters mb-2">
+											<div class="col-md-12 col-lg-6 pr-1 mobile-disable-padding">
+												<div style="margin-bottom: 8px;">
+													<input id="contact-form-name" type="text" class="form-control" placeholder="@lang('home.contact-form-name')" name="name">
+												</div>
+												<div style="margin-bottom: 8px;">
+													<input id="contact-form-email" type="text" class="form-control" placeholder="@lang('home.contact-form-email')" name="email">
+												</div>
+												<div style="margin-bottom: 8px;">
+													<input id="contact-form-subject" type="text" class="form-control" placeholder="@lang('home.contact-form-subject')" name="subject">
+												</div>
+											</div>
+											<div class="col-md-12 col-lg-6 pl-1 mobile-disable-padding">
+												<textarea id="contact-form-message" class="form-control" style="height: 130px;" placeholder="@lang('home.contact-form-message')" name="message"></textarea>
+											</div>
+										</div>
+										<div class="text-right">
+											<button type="submit" id="contact-form-submit" class="btn">@lang('home.submit')</button>
+											<div class="mt-2" id="form-messages"></div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section> --}}
+	<div class="back-to-top-wrapper text-center py-3">
+		<div class="mb-2">
+			<a class="back-to-top">
+				<img src="{{asset('img/arrow.png')}}" style="width: 32px; height: 21px; object-fit: contain; transform: rotate(180deg);">
+			</a>
+		</div>
+		<div>
+			<a class="back-to-top">
+				<span class="text-white font_8">BACK TO TOP</span>
+			</a>
+		</div>
 	</div>
 @stop
 
@@ -402,6 +480,12 @@
 				$(this).parent().find(".icon-hover-animation-slide").removeClass('link-area-link-icon-hover');
 			}
 		)
+
+		// back to top
+		$(".back-to-top").on('click', function(e) {
+			e.preventDefault();
+			$('html, body').animate({scrollTop:0}, '500');
+		});
 	});
 	</script>
 @stop
