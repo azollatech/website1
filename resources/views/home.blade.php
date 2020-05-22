@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', __('Home'))
+@section('title', __('主頁'))
 
 @section('navbar')
 	@include('partials.navbar-wrapper')

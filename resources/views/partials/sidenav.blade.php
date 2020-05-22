@@ -13,6 +13,9 @@
         <li class="nav-item {{ Request::path() == '/property-refinancing' ? 'active' : '' }}">
             <a class="nav-link" href="{{url('/property-refinancing')}}">&nbsp;&nbsp;加按套現</a>
         </li>
+        <li class="nav-item {{ Request::path() == '/bankruptcy-consultation' ? 'active' : '' }}">
+            <a class="nav-link" href="{{url('/bankruptcy-consultation')}}">&nbsp;&nbsp;破產諮詢</a>
+        </li>
         <li class="nav-item {{ Request::path() == '/contact-us' ? 'active' : '' }}">
             <a class="nav-link" href="{{url('/contact-us')}}">&nbsp;&nbsp;聯絡我們</a>
         </li>
