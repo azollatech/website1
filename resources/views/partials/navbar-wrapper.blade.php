@@ -18,7 +18,8 @@ background: linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(51, 52, 60, 0.91)
             top: 2px;
             padding: 0;
             height: 32px;
-            width: 32px;"><i class="material-icons md-32">menu</i></button>
+            width: 32px;
+            outline: none;"><i class="material-icons md-32">menu</i></button>
         @include('partials.navbar')
     </div>
 </nav>

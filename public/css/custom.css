@@ -162,10 +162,12 @@ a:hover {
     padding: 8px;
     border: 0;
     background-color: transparent;
+    outline: none !important;
 }
 .hamburger i {
     height: 32px;
     width: 32px;
+    outline: none;
 }
 .material-icons.md-32 {
     font-size: 32px;
@@ -191,22 +193,58 @@ a:hover {
 #sidenav a {
     padding: 12px 20px 12px 28px;
     text-decoration: none;
-    color: #333333;
+    color: #397AB8;
     display: block;
     font: normal normal normal 16px/1.4em 'Noto Sans TC', sans-serif;
-    color: #397AB8 !important;
     transition: 0.2s;
 }
 #sidenav a:hover {
-    color: #0C3D6B !important;
+    color: #0C3D6B;
 }
 #sidenav a:active {
-    color: #092F52 !important;
+    color: #092F52;
 }
 #sidenav .active a {
     background: #eeeeee;
     /* color: #333 !important; */
     color: #092F52 !important;
+}
+
+#sidenav a.color-1 {
+    color: #1C6678;
+}
+#sidenav a.color-1:hover {
+    color: #103B45;
+}
+#sidenav a.color-2 {
+    color: #D1AB59;
+}
+#sidenav a.color-2:hover {
+    color: #9E8143;
+}
+#sidenav a.color-3 {
+    color: #4A987C;
+}
+#sidenav a.color-3:hover {
+    color: #326653;
+}
+#sidenav a.color-4 {
+    color: #4A6A9C;
+}
+#sidenav a.color-4:hover {
+    color: #324769;
+}
+#sidenav a.color-5 {
+    color: #D18059;
+}
+#sidenav a.color-5:hover {
+    color: #9E6143;
+}
+#sidenav a.color-6 {
+    color: #475bcb;
+}
+#sidenav a.color-6:hover {
+    color: #364599;
 }
 #sidenav-overlay {
     background: rgba(0,0,0,0.6);

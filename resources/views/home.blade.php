@@ -370,7 +370,7 @@
 		</div>
 		<div>
 			<a class="back-to-top">
-				<span class="text-white font_8">BACK TO TOP</span>
+				<span class="text-white font_8">回到頂端</span>
 			</a>
 		</div>
 	</div>
