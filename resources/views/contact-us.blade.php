@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', __('Contact Us'))
+@section('title', __('聯絡我們'))
 
 @section('navbar')
 	@include('partials.navbar-wrapper')
@@ -149,37 +149,12 @@
 
 @section('css')
     <style>
-		.link-area-link-icon {
-			cursor: pointer;
-		}
-		.link-area-link-icon-hover i.circle-yes {
-			/* background-color: #464d5f !important; */
-			/* border-color: #464d5f !important; */
-			background-color: #3d405c !important;
-			border-color: #3d405c !important;
-		}
+	@include('partials.contact-animation-css')
     </style>
 @stop
 
 @section('js')
 	<script>
-	$( document ).ready(function() {
-		$(".icon-hover-animation-slide").hover(
-			function() {
-				$(this).addClass('link-area-link-icon-hover');
-			},
-			function() {
-				$(this).removeClass('link-area-link-icon-hover');
-			}
-		)
-		$(".contact-now-buttons").hover(
-			function() {
-				$(this).parent().find(".icon-hover-animation-slide").addClass('link-area-link-icon-hover');
-			},
-			function() {
-				$(this).parent().find(".icon-hover-animation-slide").removeClass('link-area-link-icon-hover');
-			}
-		)
-	});
+	@include('partials.contact-animation-js')
 	</script>
 @stop

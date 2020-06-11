@@ -55,7 +55,7 @@
 
         <!-- Styles -->
 		<link rel="stylesheet" href="{{ asset('css/footer.css?v=1.0.1') }}">
-		<link rel="stylesheet" href="{{ asset('css/custom.css?v=1.0.2') }}">
+		<link rel="stylesheet" href="{{ asset('css/custom.css?v=1.0.3') }}">
 		<link rel="stylesheet" href="{{ asset('css/icon_animations.css?v=1.0.0') }}">
 
 

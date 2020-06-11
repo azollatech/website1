@@ -8,7 +8,7 @@
             <a class="nav-link color-2" href="{{url('/debt-relief-loan')}}"><img src="http://localhost:8888/img/icn-2.png" width="28" height="28" style="vertical-align: middle;">&nbsp;&nbsp;<span style="vertical-align: middle;">債務舒緩</span></a>
         </li>
         <li class="nav-item {{ Request::path() == '/mortgage-loan' ? 'active' : '' }}">
-            <a class="nav-link color-3" href="{{url('/mortgage-loan')}}"><img src="http://localhost:8888/img/icn-3.png" width="28" height="28" style="vertical-align: middle;">&nbsp;&nbsp;<span style="vertical-align: middle;">物業套現</span></a>
+            <a class="nav-link color-3" href="{{url('/mortgage-loan')}}"><img src="http://localhost:8888/img/icn-3.png" width="28" height="28" style="vertical-align: middle;">&nbsp;&nbsp;<span style="vertical-align: middle;">貸款產品</span></a>
         </li>
         <li class="nav-item {{ Request::path() == '/property-refinancing' ? 'active' : '' }}">
             <a class="nav-link color-4" href="{{url('/property-refinancing')}}"><img src="http://localhost:8888/img/icn-5.png" width="28" height="28" style="vertical-align: middle;">&nbsp;&nbsp;<span style="vertical-align: middle;">加按套現</span></a>

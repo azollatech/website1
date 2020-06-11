@@ -47,7 +47,7 @@
 							<div class="banner-button-diamond" data-href="{{url('mortgage-loan')}}">
 								<img src="{{url('img/icn-3.png')}}"/>
 							</div>
-							<a class="banner-button-rect" href="{{url('mortgage-loan')}}" style="background: #4A987C;">&nbsp;&nbsp;&nbsp;&nbsp;物業套現</a>
+							<a class="banner-button-rect" href="{{url('mortgage-loan')}}" style="background: #4A987C;">&nbsp;&nbsp;&nbsp;&nbsp;貸款產品</a>
 						</div>
 					</div>
 					<div class="d-inline-block banner-button-wrapper-individual">
@@ -102,7 +102,7 @@
                             <div class="banner-button-diamond" data-href="{{url('mortgage-loan')}}">
 								<img src="{{url('img/icn-3.png')}}"/>
 							</div>
-                            <a class="banner-button-rect" href="{{url('mortgage-loan')}}" style="background: #4A987C;">&nbsp;&nbsp;&nbsp;&nbsp;物業套現</a>
+                            <a class="banner-button-rect" href="{{url('mortgage-loan')}}" style="background: #4A987C;">&nbsp;&nbsp;&nbsp;&nbsp;貸款產品</a>
                         </div>
                         <div class="banner-button even position-relative">
                             <div class="banner-button-diamond" data-href="{{url('property-refinancing')}}">

@@ -50,6 +50,10 @@ h1, h2, h3, h4, h5, h6 {
     color: #3d405c;
 }
 
+p {
+    line-height: 1.8rem;
+}
+
 a {
     /* color: #007bff; */
     color: #4A6A9C;
@@ -64,6 +68,10 @@ a:active,
 a:hover {
     outline: 0;
     text-decoration: none;
+}
+
+ol li, ul li {
+    margin-bottom: 1rem!important;
 }
 
 .btn-primary {
@@ -100,6 +108,9 @@ a:hover {
 }
 .navbar-light .navbar-nav .nav-link:active {
     color: rgba(255,255,255,1);
+}
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+    color: rgba(255,255,255,.9);
 }
 #sidenav .nav-link {
     text-transform: uppercase;

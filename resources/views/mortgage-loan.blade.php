@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', __('Contact Us'))
+@section('title', __('物業按揭貸款'))
 
 @section('navbar')
 	@include('partials.navbar-wrapper')
@@ -8,16 +8,21 @@
 @stop
 
 @section('content')
-	@include('partials.header-banner', ["image"=>"banner-3-darken.jpg", "title"=>"物業套現"])
+	@include('partials.header-banner', ["image"=>"banner-3-darken.jpg", "title"=>"物業按揭貸款"])
     <section class="py-5" style="background: #fafafa;">
     	<div class="container">
             <div class="mb-5">
                 <div class="row">
-                    <div class="col-2">
+                    <div class="col-4">
+						<ul id="vertical-sidebar">
+							<li class="{{ Request::path() == 'mortgage-loan' ? 'active' : '' }}"><a href="mortgage-loan">物業按揭貸款</a></li>
+							<li class="{{ Request::path() == 'personal-loan' ? 'active' : '' }}"><a href="personal-loan">私人貸款</a></li>
+							<li class="{{ Request::path() == 'owner-loan' ? 'active' : '' }}"><a href="owner-loan">中小企業主貸款</a></li>
+						</ul>
                     </div>
                     <div class="col-8" style="font-size: 1rem;">
                         <div>
-                            <h2 style="text-align: left;" data-fontsize="34" data-lineheight="50">物業套現</h2>
+                            <h2 style="text-align: left;" data-fontsize="34" data-lineheight="50">物業按揭貸款</h2>
                         </div>
                         <div class="separator" style="
                             margin-top: 15px;
@@ -33,13 +38,16 @@
 							</ul>
                         </div>
                     </div>
-                    <div class="col-2">
-                    </div>
                 </div>
     		</div>
     	</div>
     </section>
-	<section class="py-5" style="background: #fafafa;">
+
+	<div class="section-separator bigtriangle" style="padding:0;margin-left:-30px;margin-right:-30px;background: #f5f5f5;">
+		<svg class="fusion-big-triangle-candy" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none" style="fill:#fafafa;padding:0;"><path d="M-1 -1 L50 99 L101 -1 Z"></path></svg>
+	</div>
+
+	<section class="py-5" style="background: #f5f5f5;">
 		<div class="container">
 			<div class="mb-5">
 				<div class="text-center">
@@ -116,14 +124,32 @@
 @stop
 
 @section('css')
-    <style>
+	<style>
+	ul#vertical-sidebar {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		width: 80%;
+	}
+	ul#vertical-sidebar > li {
+		border-bottom: 1px solid #E8E8E8;
+		padding: 8px 16px;
+		margin: 0!important;
+		width: 100%;
+		transition: padding-left .3s ease;
+	}
+	ul#vertical-sidebar > li:hover,
+	ul#vertical-sidebar > li.active {
+		padding-left: 20px;
+	    border-left: 2px solid #028ecf;
+	}
+
+	@include('partials.contact-animation-css')
     </style>
 @stop
 
 @section('js')
 	<script>
-	$( document ).ready(function() {
-
-	});
+	@include('partials.contact-animation-js')
 	</script>
 @stop
