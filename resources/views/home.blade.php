@@ -119,7 +119,7 @@
                     </div>
                 </div>
                 <div class="tagline col-12 col-md-8 col-lg-8">
-					<p class="tagline">
+					<p class="tagline" style="line-height: inherit;">
 						<span>香港最全面銀行理財網絡</span><br>
 						<button class="btn text-white call-for-action mt-3" data-href="https://api.whatsapp.com/send?phone=85298765432&amp;text=%E6%88%91%E6%83%B3%E4%BA%86%E8%A7%A3%E6%9B%B4%E5%A4%9A">
 						<i class="fa fa-whatsapp" aria-hidden="true" style="font-size: 18px;"></i> WhatsApp聯絡</button>
