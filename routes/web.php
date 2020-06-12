@@ -28,6 +28,12 @@ Route::get('/debt-relief-loan', function () {
 Route::get('/mortgage-loan', function () {
     return view('mortgage-loan');
 });
+Route::get('/personal-loan', function () {
+    return view('personal-loan');
+});
+Route::get('/owner-loan', function () {
+    return view('owner-loan');
+});
 
 Route::get('/property-refinancing', function () {
     return view('property-refinancing');
