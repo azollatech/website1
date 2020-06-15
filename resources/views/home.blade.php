@@ -91,18 +91,38 @@
 								<img src="{{url('img/icn-1.png')}}"/>
 							</div>
                             <a class="banner-button-rect" href="{{url('tu-debt-restructuring')}}" style="background: #1C6678;">&nbsp;&nbsp;&nbsp;&nbsp;TU重組方案</a>
+							<div class="banner-button-dropdown">
+								<div class="dropdown-content">
+									<a href="{{url('tu-debt-restructuring#anchor1')}}">提升TU信貸評級</a>
+									<a href="{{url('tu-debt-restructuring#anchor2')}}">信用卡結欠還款計算機</a>
+									<a href="{{url('tu-debt-restructuring#anchor3')}}">TU重組供款方案好處</a>
+								</div>
+							</div>
                         </div>
                         <div class="banner-button even position-relative">
                             <div class="banner-button-diamond" data-href="{{url('debt-relief-loan')}}">
 								<img src="{{url('img/icn-2.png')}}"/>
 							</div>
                             <a class="banner-button-rect" href="{{url('debt-relief-loan')}}" style="background: #D1AB59;">債務舒緩&nbsp;&nbsp;&nbsp;&nbsp;</a>
+							<div class="banner-button-dropdown">
+								<div class="dropdown-content">
+									<a href="{{url('debt-relief-loan?tab=iva')}}">IVA 個人自願安排</a>
+									<a href="{{url('debt-relief-loan?tab=drp')}}">DRP 債務舒緩計劃</a>
+								</div>
+							</div>
                         </div>
                         <div class="banner-button odd position-relative">
                             <div class="banner-button-diamond" data-href="{{url('mortgage-loan')}}">
 								<img src="{{url('img/icn-3.png')}}"/>
 							</div>
                             <a class="banner-button-rect" href="{{url('mortgage-loan')}}" style="background: #4A987C;">&nbsp;&nbsp;&nbsp;&nbsp;貸款產品</a>
+							<div class="banner-button-dropdown">
+								<div class="dropdown-content">
+									<a href="{{url('mortgage-loan')}}">物業按揭貸款</a>
+									<a href="{{url('personal-loan')}}">私人貸款</a>
+									<a href="{{url('owner-loan')}}">中小企業主貸款</a>
+								</div>
+							</div>
                         </div>
                         <div class="banner-button even position-relative">
                             <div class="banner-button-diamond" data-href="{{url('property-refinancing')}}">

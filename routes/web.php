@@ -46,3 +46,7 @@ Route::get('/bankruptcy-consultation', function () {
 Route::get('/contact-us', function () {
     return view('contact-us');
 });
+
+Route::get('/procedure', function () {
+    return view('procedure');
+});

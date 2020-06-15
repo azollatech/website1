@@ -29,12 +29,12 @@
 
 						<nav>
 							<div class="nav nav-tabs" id="nav-tab" role="tablist">
-								<a style="background: none;" class="nav-item nav-link active" id="nav-iva-tab" data-toggle="tab" href="#nav-iva" role="tab" aria-controls="nav-iva" aria-selected="true">IVA 個人自願安排</a>
-								<a style="background: none;" class="nav-item nav-link" id="nav-drp-tab" data-toggle="tab" href="#nav-drp" role="tab" aria-controls="nav-drp" aria-selected="false">DRP 債務舒緩計劃</a>
+								<a style="background: none;" class="nav-item nav-link @if (empty($_GET['tab'])||$_GET['tab']=='iva')active @endif" id="nav-iva-tab" data-toggle="tab" href="#nav-iva" role="tab" aria-controls="nav-iva" aria-selected="true">IVA 個人自願安排</a>
+								<a style="background: none;" class="nav-item nav-link @if (!empty($_GET['tab'])&&$_GET['tab']=='drp')active @endif" id="nav-drp-tab" data-toggle="tab" href="#nav-drp" role="tab" aria-controls="nav-drp" aria-selected="false">DRP 債務舒緩計劃</a>
 							</div>
 						</nav>
 						<div class="tab-content" id="nav-tabContent">
-							<div class="tab-pane fade show active" id="nav-iva" role="tabpanel" aria-labelledby="nav-iva-tab">
+							<div class="tab-pane fade @if (empty($_GET['tab'])||$_GET['tab']=='iva')show active @endif" id="nav-iva" role="tabpanel" aria-labelledby="nav-iva-tab">
 								<div class="mb-5 mt-5">
 									<p><h5 class="mb-4" style="font-size: 1.4rem;">IVA 個人自願安排 (INDIVIDUAL VOLUNTARY ARRANGEMENT)</h5></p>
 									<p>根據《破產條例》第6章第20條， 債務人須經由會計師及律師向其所有債權人提出償還解決債項的建議書，要經過法庭聆訊及頒佈臨時命令，並獲佔債務未償還總額75%以上債權人同意並可通過其建議書，確保債務人的資產可獲妥善分派給債權人。</p>
@@ -93,7 +93,7 @@
 									</div>
 		                        </div>
 							</div>
-							<div class="tab-pane fade" id="nav-drp" role="tabpanel" aria-labelledby="nav-drp-tab">
+							<div class="tab-pane fade @if (!empty($_GET['tab'])&&$_GET['tab']=='drp')show active @endif" id="nav-drp" role="tabpanel" aria-labelledby="nav-drp-tab">
 								<div class="mb-5 mt-5">
 									<p><h5 class="mb-4" style="font-size: 1.4rem;">DRP 債務舒緩計劃</h5></p>
 									<p>是債務重組當中之一方案，這是個人自願安排（IVA）的簡化版，因為它與 IVA 的最大分別在於債務舒緩不需要透過法律程序來安排，也可以與個別的債權人直接商談還款協議，使欠債人避免進行破產及法律程序也能解決債務問題</p>
@@ -211,8 +211,5 @@
 @section('js')
 	<script>
 	@include('partials.contact-animation-js')
-	$( document ).ready(function() {
-
-	});
 	</script>
 @stop

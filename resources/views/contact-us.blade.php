@@ -71,7 +71,12 @@
             </div>
     	</div>
     </section>
-	<section class="py-5" style="background: #fafafa;">
+
+	<div class="section-separator bigtriangle" style="padding:0;margin-left:-30px;margin-right:-30px;background: #f5f5f5;">
+		<svg class="fusion-big-triangle-candy" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100" viewBox="0 0 100 100" preserveAspectRatio="none" style="fill:#fafafa;padding:0;"><path d="M-1 -1 L50 99 L101 -1 Z"></path></svg>
+	</div>
+
+	<section class="py-5" style="background: #f5f5f5;">
 		<div class="container">
 			<div class="mb-5">
 				<div class="text-center">

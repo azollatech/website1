@@ -25,6 +25,9 @@
         <li class="nav-item {{ Request::path() == 'bankruptcy-consultation' ? 'active' : '' }}">
             <a class="nav-link" href="{{url('/bankruptcy-consultation')}}">破產諮詢</a>
         </li>
+        <li class="nav-item {{ Request::path() == 'procedure' ? 'active' : '' }}">
+            <a class="nav-link" href="{{url('/procedure')}}">貸款程序</a>
+        </li>
         <li class="nav-item {{ Request::path() == 'contact-us' ? 'active' : '' }}">
             <a class="nav-link" href="{{url('/contact-us')}}">聯絡我們</a>
         </li>

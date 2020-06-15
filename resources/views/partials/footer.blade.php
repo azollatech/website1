@@ -5,15 +5,15 @@
         <h3>還原理財中心</h3>
 
         <p class="footer-links">
-            <a href="#">首頁</a>
+            <a href="{{url('/')}}">首頁</a>
             ·
-            <a href="#">TU重組方案</a>
+            <a href="{{url('tu-debt-restructuring')}}">TU重組方案</a>
             ·
-            <a href="#">債務舒緩</a>
+            <a href="{{url('debt-relief-loan')}}">債務舒緩</a>
             ·
-            <a href="#">貸款產品</a>
+            <a href="{{url('mortgage-loan')}}">貸款產品</a>
             ·
-            <a href="#">加按套現</a>
+            <a href="{{url('property-refinancing')}}">加按套現</a>
         </p>
 
         <p class="footer-company-name">還原理財中心 © 2020</p>

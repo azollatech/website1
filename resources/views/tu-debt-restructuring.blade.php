@@ -25,7 +25,8 @@
                             max-width: 170px;
                             min-height: 2px;
                             background: #dddddd;"></div>
-                        <div class="mb-5">
+                        <div class="mb-5 position-relative">
+							<a id="anchor1" style="position: absolute; top: -100px;"></a>
 							<div class="row">
 								<div class="col-12 col-sm-6 col-md-8">
 		                            <p><h5 style="color: #3d405c;">減低還款利息 提升TU信貸評級</h5></p>
@@ -37,7 +38,8 @@
 							</div>
                         </div>
 
-						<div class="py-5 mb-5">
+						<div class="py-5 mb-5 position-relative">
+							<a id="anchor2" style="position: absolute; top: -100px;"></a>
 							<table class="table" style="background: #EAF6FD; border-bottom: 1px solid #666;">
 								<tr>
 									<td colspan="2" class="text-center" style="background: rgba(0,0,0,0.04); border-top: 1px solid #666;">信用卡結欠還款計算機</td>
@@ -75,7 +77,8 @@
 							</table>
 						</div>
 
-                        <div class="mb-5">
+                        <div class="mb-5 position-relative">
+							<a id="anchor3" style="position:absolute; top: -100px;"></a>
                             <h5 class="mb-3" style="text-decoration: underline;">TU重組供款方案的好處</h5>
                             <ol>
                                 <li>每月供款壓力下降 ----- 利息下降</li>
